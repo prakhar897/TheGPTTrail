@@ -5,6 +5,5 @@
     "editor.formatOnSave": true,
     "javascript.preferences.quoteStyle": "single",
     "prettier.singleQuote": true,
-    "rift.chatModel": "gpt4all:llama-2-7b-chat.ggmlv3.q4_0",
-    "rift.codeEditModel": "openai:gpt-3.5-turbo"
+    "editor.indentSize": 4
 }
