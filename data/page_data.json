@@ -130,7 +130,7 @@
                         },
                         "action": {
                             "type": "changePage",
-                            "newPageName": ""
+                            "newPageName": "name_selection"
                         }
                     },
                     {
@@ -296,6 +296,58 @@
                         "action": {
                             "type": "changePage",
                             "newPageName": "main_menu"
+                        }
+                    }
+                ],
+                "prompt": {
+                    "en": "What is your choice?",
+                    "de": "Was ist deine Wahl?"
+                },
+                "img": "",
+                "content": {
+                    "textIndent": 2
+                }
+            }
+        },
+        {
+            "name": "name_selection",
+            "type": "choice",
+            "showInput": true,
+            "data": {
+                "title": {
+                    "en": [
+                        "What is the first name ",
+                        "of the wagon leader?",
+                        "LEADER_NAME",
+                        "What are the first names of the four",
+                        "other members of your party ?",
+                        "1. SECOND PERSON",
+                        "2. THIRD PERSON",
+                        "3. FOURTH PERSON",
+                        "4. FIFTH PERSON",
+                        "Are these names correct"
+                    ],
+                    "de": ["Viele Arten von Menschen haben das gemacht", "Reise nach Oregon."]
+                },
+                "choices": [
+                    {
+                        "text": {
+                            "en": "YES",
+                            "de": "Sei ein Banker aus Boston"
+                        },
+                        "action": {
+                            "type": "changePage",
+                            "newPageName": "name_selection"
+                        }
+                    },
+                    {
+                        "text": {
+                            "en": "NO",
+                            "de": "Seien Sie ein Zimmermann aus Ohio"
+                        },
+                        "action": {
+                            "type": "changePage",
+                            "newPageName": ""
                         }
                     }
                 ],

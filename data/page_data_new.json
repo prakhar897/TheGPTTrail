@@ -1,0 +1,103 @@
+{
+    "start": "main_menu",
+    "pages": {
+        "main_menu": {
+            "name": "main_menu",
+            "data": {
+                "img": [
+                    {
+                        "name": "A top divider which separates the game Title with the options while adhering to the overall design",
+                        "location": "./game_images/main_menu1.png",
+                        "design": {}
+                    },
+                    {
+                        "name": "A bottom divider which separates the game Title with the options while adhering to the overall design",
+                        "location": "./game_images/main_menu2.png",
+                        "design": {}
+                    }
+                ],
+                "text": [
+                    {
+                        "content": [
+                            "You may",
+                            "1. Travel the Trail",
+                            "2. Learn About the trail",
+                            "What is your choice"
+                        ],
+                        "design": {}
+                    }
+                ],
+                "inputs": ["main_menu_selection"]
+            }
+        },
+        "occupation": {
+            "name": "occupation",
+            "page_structure": ["img[0]", "text[0]", "input[0]"],
+            "data": {
+                "text": {
+                    "content": [
+                        "Many kinds of people made the",
+                        "trip to Oregon.",
+                        "1. Be a banker from Boston",
+                        "2. Be a carpenter from Ohio",
+                        "3. Be a farmer from Illinois",
+                        "What is your choice?"
+                    ],
+                    "design": {}
+                },
+                "img": [
+                    {
+                        "name": "A top divider which separates the game Title with the options while adhering to the overall design",
+                        "location": "./game_images/main_menu1.png",
+                        "design": {}
+                    },
+                    {
+                        "name": "A bottom divider which separates the game Title with the options while adhering to the overall design",
+                        "location": "./game_images/main_menu2.png",
+                        "design": {}
+                    }
+                ]
+            },
+            "inputs": [{ "name": "occupation_selection", "nextPage": "leader_name_selection" }]
+        },
+        "leader_name_selection": {
+            "name": "leader_name_selection",
+            "page_structure": ["img[0]", "text[0]", "input[0]"],
+            "data": {
+                "img": [
+                    {
+                        "name": "A photo of wagon with the leader and his family inside",
+                        "location": "./game_images/leader_name_selection1.png",
+                        "design": {}
+                    }
+                ],
+                "text": [
+                    { "content": ["What is the first name", "of the wagon leader?"], "design": {} }
+                ]
+            },
+            "inputs": [{ "name": "leader_name", "nextPage": "scenery" }]
+        },
+        "scenery": {
+            "name": "scenery",
+            "data": {
+                "img": [
+                    {
+                        "name": "A 8-bit pixel mountain image in the background",
+                        "location": "./game_images/scenery1.png",
+                        "design": {}
+                    },
+                    {
+                        "name": "A 8bit cow pulling a cart",
+                        "location": "./game_images/scenery2.png",
+                        "design": {}
+                    },
+                    {
+                        "name": "A 8bit grassy field",
+                        "location": "./game_images/scenery2.png",
+                        "design": {}
+                    }
+                ]
+            }
+        }
+    }
+}
