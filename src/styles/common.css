@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Press+Start+2P&display=swap');
+
+:root {
+    --scale: 4;
+}
+
+body {
+    height: 100vh; /* This ensures the body takes up the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Removes default margin */
+}
+
+.game-container {
+    background-color: black;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    height: calc(192px * var(--scale));
+    width: calc(280px * var(--scale));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Removes default margin */
+}
