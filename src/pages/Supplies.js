@@ -1,33 +1,34 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import '../styles/common.css';
 import { changePage } from '../actions/gameActions';
+import '../styles/common.css';
 import { useFocusInput } from '../helpers/pageHelpers';
-import { addMoney } from '../actions/playerActions';
 
-const OccupationPage = ({ pageName, changePage, addMoney }) => {
+const Supplies = ({ pageName, inventory, money, changePage }) => {
     // Makes sure that the text field doesn't go out of focus ever.
     const inputRef = useFocusInput();
 
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             const choice = event.target.value;
-            addMoney(choice)
-
             changePage(pageName, choice);
         }
     };
 
     return (
         <div>
-            <h1>The Oregon Trail</h1>
-            <p>Many kinds of people made the trip to Oregon.</p>
-            <p>You may:</p>
-            <p>1. Be a banker from Boston</p>
-            <p>2. Be a carpenter from Ohio</p>
-            <p>3. Be a farmer from Illinois</p>
-            <p>4. Find out the differences between these choices</p>
+            <h1>Your Supplies</h1>
 
+            <div>
+                {
+                    Object.keys(inventory).map((key, index) => (
+                        <p>{inventory[key]['name']} : {inventory[key]['count']}</p>
+                    ))
+                }
+                <p>money left : {money}</p>
+            </div>
+
+
+            <p>Press SPACE BAR to continue</p>
             <input
                 type="text"
                 onKeyPress={handleKeyPress}
@@ -38,13 +39,14 @@ const OccupationPage = ({ pageName, changePage, addMoney }) => {
     );
 };
 
-const mapDispatchToProps = {
-    changePage: changePage,
-    addMoney: addMoney
-};
-
 const mapStateToProps = (state) => ({
     pageName: state.game.activePage,
+    inventory: state.player.inventory,
+    money: state.player.money
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(OccupationPage);
+const mapDispatchToProps = {
+    changePage: changePage,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Supplies);

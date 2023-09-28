@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { changePage } from '../actions/gameActions';
 import '../styles/common.css';
+import Wagon from '../components/wagon';
 
 const Travel = ({ pageName, changePage }) => {
 
@@ -16,6 +17,10 @@ const Travel = ({ pageName, changePage }) => {
     return (
         <div>
             <div>
+                *Mountains in the background*
+            </div>
+            <div>
+                <Wagon />
                 <p>* animation shows cart moving left, values below change *</p>
             </div>
             <p>Date: April 2, 1848</p>

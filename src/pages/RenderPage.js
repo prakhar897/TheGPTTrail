@@ -3,6 +3,9 @@ import Occupation from './Occupation';
 import { connect } from 'react-redux';
 import '../styles/common.css';
 import NameSelection from './NameSelection';
+import Travel from './Travel';
+import SizeUp from './SizeUp';
+import Supplies from './Supplies';
 
 
 const RenderPage = ({ pageName }) => {
@@ -14,6 +17,12 @@ const RenderPage = ({ pageName }) => {
             return <Occupation />;
         case 'nameSelection':
             return <NameSelection />;
+        case 'travel':
+            return <Travel />;
+        case 'sizeUp':
+            return <SizeUp />;
+        case 'supplies':
+            return <Supplies />;
 
         default:
             return null;

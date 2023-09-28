@@ -1,0 +1,11 @@
+{
+	"Store": {
+		"yoke": 20,
+		"clothing": 10,
+		"food": 10,
+		"ammunition": 2,
+		"wheels": 10,
+		"axle": 10,
+		"tongue": 10
+	}
+}

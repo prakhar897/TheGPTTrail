@@ -55,7 +55,6 @@ const SizeUp = ({ pageName, changePage }) => {
 
             <p>What is your choice ?</p>
 
-            <p>What is your choice ?</p>
             <input
                 type="text"
                 onKeyPress={handleKeyPress}

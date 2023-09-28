@@ -1,7 +1,7 @@
 import { getNextPage } from '../helpers/pageHelpers';
 
 const initialState = {
-    activePage: "mainMenu",
+    activePage: "supplies",
     sound: "true",
     scale: 4
 };
