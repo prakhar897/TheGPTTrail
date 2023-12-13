@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { changePage } from '../actions/gameActions';
-import '../styles/common.css';
-import { addCharacterName } from '../actions/playerActions';
+import { changePage } from '../../actions/gameActions';
+import '../../styles/common.css';
+import { addCharacterName } from '../../actions/playerActions';
 
 const NameSelection = ({ pageName, changePage }) => {
     const firstInputRef = React.useRef();

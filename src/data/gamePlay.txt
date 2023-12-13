@@ -1,8 +1,5 @@
 
 APPLE II --- OREGON TRAIL 
-
-this is a sequence of game play to help in the p5js remaking of this original version 
-played on YouTube livestream Nov 18, 2022.
 -------
 
 

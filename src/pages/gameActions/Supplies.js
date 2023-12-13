@@ -1,18 +1,24 @@
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { changePage } from '../actions/gameActions';
-import '../styles/common.css';
-import { useFocusInput } from '../helpers/pageHelpers';
+import { changePage } from '../../actions/gameActions';
+import '../../styles/common.css';
 
 const Supplies = ({ pageName, inventory, money, changePage }) => {
-    // Makes sure that the text field doesn't go out of focus ever.
-    const inputRef = useFocusInput();
 
-    const handleKeyPress = (event) => {
-        if (event.key === 'Enter') {
-            const choice = event.target.value;
-            changePage(pageName, choice);
-        }
-    };
+    useEffect(() => {
+        const handleKeyPress = (event) => {
+            if (event.key === ' ') {
+                const choice = event.target.value;
+                changePage(pageName, 'space');
+            }
+        };
+
+        document.addEventListener('keypress', handleKeyPress);
+
+        return () => {
+            document.removeEventListener('keypress', handleKeyPress);
+        };
+    }, [changePage, pageName]);
 
     return (
         <div>
@@ -24,17 +30,11 @@ const Supplies = ({ pageName, inventory, money, changePage }) => {
                         <p>{inventory[key]['name']} : {inventory[key]['count']}</p>
                     ))
                 }
-                <p>money left : {money}</p>
+                <p>money left : {money}$</p>
             </div>
 
 
             <p>Press SPACE BAR to continue</p>
-            <input
-                type="text"
-                onKeyPress={handleKeyPress}
-                placeholder="Enter a number (1-4)"
-                ref={inputRef}
-            />
         </div>
     );
 };

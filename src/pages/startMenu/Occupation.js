@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import '../styles/common.css';
-import { changePage } from '../actions/gameActions';
-import { useFocusInput } from '../helpers/pageHelpers';
-import { addMoney } from '../actions/playerActions';
+import '../../styles/common.css';
+import { changePage } from '../../actions/gameActions';
+import { useFocusInput } from '../../helpers/pageHelpers';
+import { addMoney } from '../../actions/playerActions';
 
 const OccupationPage = ({ pageName, changePage, addMoney }) => {
     // Makes sure that the text field doesn't go out of focus ever.

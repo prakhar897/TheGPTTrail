@@ -40,7 +40,41 @@ var data = {
         }
     },
     sizeUp: {
-
+        1: {
+            next_page: 'travel'
+        },
+        2: {
+            next_page: 'supplies'
+        },
+        3: {
+            next_page: 'map'
+        },
+        4: {
+            next_page: 'changePace'
+        },
+        5: {
+            next_page: 'changeFoodRations'
+        },
+        6: {
+            next_page: 'stopToRest'
+        },
+        7: {
+            next_page: 'AttemptToTrade'
+        },
+        8: {
+            next_page: 'TalkToPeople'
+        },
+        9: {
+            next_page: 'BuySupplies'
+        },
+        10: {
+            next_page: 'hunt'
+        }
+    },
+    supplies: {
+        space: {
+            next_page: "sizeUp"
+        }
     }
 };
 

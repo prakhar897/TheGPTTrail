@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { changePage } from '../actions/gameActions';
-import '../styles/common.css';
-import { useFocusInput } from '../helpers/pageHelpers';
+import { changePage } from '../../actions/gameActions';
+import '../../styles/common.css';
+import { useFocusInput } from '../../helpers/pageHelpers';
 
 const MainMenu = ({ pageName, changePage }) => {
     // Makes sure that the text field doesn't go out of focus ever.

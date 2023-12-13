@@ -1,0 +1,9 @@
+{
+	"promptToBuySupplies": "Before leaving Independence, you should buy equipment and supplies. You have {{ money }} in cash, but you don't have to spend it all now. ",
+	"introduceStore": "You can buy whatever you need at Matt's General Store",
+	"StoreOwnerGivingIntro": "Hello, I'm Matt. So you're going to Oregon! I can fix you up with what you need: \n - a team of oxen to pull your wagon \n - clothing for both summer and winter",
+	"storeName": "Matt's General Store",
+	"journeyStartMessage": "Well then, you're ready to start. Good luck ! You have a long and difficult jounrey ahead of you.",
+	"loadingWagonMessage": "[Now loading the wagon]",
+	"riverCrossing": "You must cross the river in order to continue. The river at this point is currently 625 feet across, and the 4.3 feet deep in the middle."
+}

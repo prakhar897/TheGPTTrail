@@ -1,64 +1,6 @@
-import { getNextPage } from '../helpers/pageHelpers';
-
-const HEALTH = {
-    good: {
-        value: 4,
-        name: 'Good',
-    },
-    adequate: {
-        value: 3,
-        name: 'Adequate',
-    },
-    poor: {
-        value: 2,
-        name: 'Poor',
-    },
-    verypoor: {
-        value: 1,
-        name: 'Very poor',
-    },
-    dead: {
-        value: 0,
-        name: 'Asleep forever', // (dead is not nice)
-    },
-};
-const OCCUPATION = {
-    banker: {
-        wealth: 1600,
-        weight: 1,
-    },
-    carpenter: {
-        wealth: 800,
-        weight: 2,
-    },
-    farmer: {
-        wealth: 400,
-        weight: 3,
-    },
-};
-const STORE = {
-    yoke: 20,
-    clothing: 10,
-    food: 10,
-    ammunition: 2,
-    wheels: 10,
-    axle: 10,
-    tongue: 10,
-};
-const PACE = {
-    steady: {
-        value: 2,
-        name: 'Steady',
-    },
-    slow: {
-        value: 1,
-        name: 'Slow',
-    },
-    stopped: {
-        value: 0,
-        name: 'Stopped',
-    },
-};
+import HEALTH from '../data/health.json';
+import PACE from '../data/pace.json';
+import OCCUPATION from '../data/occupation.json';
 
 const initialState = {
     passengers: [
@@ -146,7 +88,7 @@ const playerReducer = (state = initialState, action) => {
         case 'ADD_CHARACTER_NAME': {
             const newPassengers = state.player.passengers;
             newPassengers.forEach((passenger, index) => {
-                if (passenger.name == '') {
+                if (passenger.name === '') {
                     passenger.name = action.payload.name;
                 }
             });

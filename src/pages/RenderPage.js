@@ -1,11 +1,12 @@
-import MainMenu from './MainMenu';
-import Occupation from './Occupation';
 import { connect } from 'react-redux';
 import '../styles/common.css';
-import NameSelection from './NameSelection';
+
+import MainMenu from './startMenu/MainMenu';
+import Occupation from './startMenu/Occupation';
+import NameSelection from './startMenu/NameSelection';
 import Travel from './Travel';
 import SizeUp from './SizeUp';
-import Supplies from './Supplies';
+import Supplies from './gameActions/Supplies';
 
 
 const RenderPage = ({ pageName }) => {
